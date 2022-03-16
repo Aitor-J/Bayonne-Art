@@ -1,0 +1,116 @@
+body {
+    background-color: black;
+}
+
+.presentation{
+    position: relative;
+    width: 80vw;
+    height: 160vh;
+    margin-left: 10vw;
+    }
+
+.mosaique .box1{
+    position: relative;
+    width: 20vw;
+    height: 60vh;
+    margin-left: 0vw;
+    transition: 0.5s;
+}
+
+.mosaique .box1 img {
+    height: 60vh;
+    width: 20vw;
+    object-fit: cover;
+}
+
+.mosaique div a h3 {
+    opacity:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: 'Ultra', serif;
+    font-weight: lighter;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+    transition: 0.5s ease-in-out;
+}
+
+.mosaique div img:hover {
+transition: ease-out;
+transition: 0.5s;
+filter: blur(0.2px) brightness(0.5);
+}
+
+.mosaique .box2{
+    position: relative;
+    width: 20vw;
+    height: 98vh;
+    margin-top: 2vh;
+}
+
+.mosaique .box2 img {
+    width: 20vw;
+    height: 98vh;
+    object-fit: cover;
+}
+
+.mosaique .box3{
+    position: relative;
+    width: 20vw;
+    height: 120vh;
+    margin-left: 21vw;
+    margin-top: -160vh;
+}
+
+.mosaique .box3 img {
+    width: 20vw;
+    height: 120vh;
+    object-fit: cover;
+}
+
+.mosaique .box4{
+    position: relative;
+    width: 59vw;
+    height: 38vh;
+    margin-left: 21vw;
+    margin-top: 2vh;
+}
+
+.mosaique .box4 img {
+    width: 59vw;
+    height: 38vh;
+    object-fit: cover;
+}
+
+.mosaique .box5{
+    position: relative;
+    width: 38vw;
+    height: 80vh;
+    margin-left: 42vw;
+    margin-top: -160vh;
+}
+
+.mosaique .box5 img {
+    width: 38vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.mosaique .box6{
+    position: relative;
+    width: 38vw;
+    height: 38vh;
+    margin-left: 42vw;
+    margin-top: 2vh;
+}
+
+.mosaique .box6 img {
+    width: 38vw;
+    height: 38vh;
+    object-fit: cover;
+}
+
+
+
