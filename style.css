@@ -1,6 +1,18 @@
+:root {
+    --primary-color:#78708D;
+    --secondary-color:#55457c;
+    --text-color: #FFF2C3;
+    --text-hover:#fd9d5c;
+    --title-font-family: 'Ultra', serif; 
+    --text-font-family:'Fredoka', sans-serif;
+}
+/* Variables CSS */
+
 body {
     background-color: black;
 }
+/* background general */
+
 
 .presentation{
     position: relative;
@@ -8,6 +20,7 @@ body {
     height: 160vh;
     margin-left: 10vw;
     }
+/* contain mosaique */
 
 .mosaique .box1{
     position: relative;
@@ -16,12 +29,14 @@ body {
     margin-left: 0vw;
     transition: 0.5s;
 }
+/* contain mosaique box1 */
 
 .mosaique .box1 img {
     height: 60vh;
     width: 20vw;
     object-fit: cover;
 }
+/* contain mosaique img */
 
 .mosaique div a h3 {
     opacity:0;
@@ -29,19 +44,21 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     font-size: 2rem;
-    font-family: 'Ultra', serif;
+    font-family: var(--title-font-family);
     font-weight: lighter;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
     transition: 0.5s ease-in-out;
 }
+/* title mosaique */
 
 .mosaique div img:hover {
 transition: ease-out;
 transition: 0.5s;
 filter: blur(0.2px) brightness(0.5);
 }
+/* hover sur la mosaique  */
 
 .mosaique .box2{
     position: relative;
@@ -50,13 +67,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.mosaique .box2 img {
+.box2 img {
     width: 20vw;
     height: 98vh;
     object-fit: cover;
 }
 
-.mosaique .box3{
+.box3{
     position: relative;
     width: 20vw;
     height: 120vh;
@@ -64,13 +81,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: -160vh;
 }
 
-.mosaique .box3 img {
+.box3 img {
     width: 20vw;
     height: 120vh;
     object-fit: cover;
 }
 
-.mosaique .box4{
+.box4{
     position: relative;
     width: 59vw;
     height: 38vh;
@@ -78,13 +95,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.mosaique .box4 img {
+.box4 img {
     width: 59vw;
     height: 38vh;
     object-fit: cover;
 }
 
-.mosaique .box5{
+.box5{
     position: relative;
     width: 38vw;
     height: 80vh;
@@ -92,13 +109,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: -160vh;
 }
 
-.mosaique .box5 img {
+.box5 img {
     width: 38vw;
     height: 80vh;
     object-fit: cover;
 }
 
-.mosaique .box6{
+.box6{
     position: relative;
     width: 38vw;
     height: 38vh;
@@ -106,11 +123,79 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.mosaique .box6 img {
+.box6 img {
     width: 38vw;
     height: 38vh;
     object-fit: cover;
 }
 
+.event {
+    margin-top: 40px;
+    padding-top: 40px;
+    font-weight: lighter;
+}
+
+.event h2 {
+    font-family: var(--title-font-family);
+    color: var(--text-color);
+    text-align: center;
+    }
+
+.event .location .maps p {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* section event  */
 
 
+/* .map-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+ }
+    
+    .map-responsive iframe {
+    left:0;
+    top:0;
+    height:40%;
+    width:40%;
+    position:absolute;
+} */
+
+
+.location .maps {
+margin-top: 15vh;
+margin-left: 10vw;
+display: flex;
+justify-content: space-around;
+} 
+
+.next-event {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    } 
+
+.next-event img {
+    display: flex 2;
+        height: 40vh;
+        width: 40vw;
+        object-fit: cover;
+    }
+
+.next-event .expo p {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 2rem;
+    }
+
+.event p {
+        font-family: var(--text-font-family);
+        color: var(--text-color);
+        }
