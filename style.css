@@ -10,18 +10,68 @@
 /* Variables CSS */
 
 body {
-    background-color: black;
+    margin: 0;
+    padding:0;
+    font-family:var(text-font-family);
+    background-color: #09263F;
+    color: var(--text-color);
 }
-/* background general */
 
+/*NAV*/
+nav{
+    width:100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color); 
+}
 
+.logo{
+    width:150px;
+}
+
+/*Menu*/
+nav ul {
+    list-style: none;
+    font-size: 1.25rem;
+    margin-right: 2rem;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin:1rem;
+    cursor: pointer;
+}
+
+nav ul li a {
+    padding: .25rem;
+    text-decoration: none;
+    color:var(--text-color);
+    font-family: var(--text-font-family);
+}
+
+nav a:hover {
+    background-color:var(--text-hover);
+    color:var(--primary-color);
+    font-weight:700;
+  }
+
+/*Media queries*/
+  @media screen and (min-width: 375px) and (max-width= 800px){
+    nav{
+        flex-direction:column;
+    }  
+}
+
+/* MOSAIQUE */
 .presentation{
     position: relative;
     width: 80vw;
     height: 160vh;
     margin-left: 10vw;
     }
-/* contain mosaique */
 
 .mosaique .box1{
     position: relative;
@@ -130,48 +180,80 @@ filter: blur(0.2px) brightness(0.5);
     object-fit: cover;
 }
 
+/* EVENT */
 .event {
     margin-top: 40px;
     padding-top: 40px;
     font-weight: lighter;
 }
 
+
+.image_responsive { 
+background-image: url(./visitors-1649815.jpg);
+width: auto;
+height:100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
 .event h2 {
     font-family: var(--title-font-family);
     color: var(--text-color);
     text-align: center;
+    padding-top: 5%;
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
     }
 
-.event .location .maps p {
+.event p {
+    font-family: var(--text-font-family);
+    color: var(--text-color);
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
 }
-/* section event  */
 
-
-/* .map-responsive {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
- }
-    
-    .map-responsive iframe {
-    left:0;
-    top:0;
-    height:40%;
-    width:40%;
-    position:absolute;
-} */
-
-
-.location .maps {
-margin-top: 15vh;
-margin-left: 10vw;
-display: flex;
-justify-content: space-around;
+.maps {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    display: flex;
+    justify-content: space-around;
 } 
+
+.link_map {
+height: 40vh;
+width: 50vw;
+}
+
+.next-event {
+        margin-top: 40px;
+        padding-top: 40px;
+        font-weight: lighter;
+    }
+    
+.next-event p {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+}
+    
+.where {
+        margin-top: 15vh;
+        margin-left: 10vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+} 
+    
+.next-event img {
+    height: 40vh;
+    width: 40vw;
+    object-fit: cover;
+    }
 
 .next-event {
     margin-top: 15vh;
@@ -179,87 +261,103 @@ justify-content: space-around;
     margin-right: 10vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    } 
+    justify-content: space-around;
+} 
 
-.next-event img {
-    display: flex 2;
-        height: 40vh;
-        width: 40vw;
-        object-fit: cover;
+/*CONTACT*/
+
+.contact{
+    margin-top: 40px;
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 10vh;
+}
+
+.contact h2 {
+    font-family: var(--title-font-family);
+    color: var(--text-color);
+    text-align: center;
     }
 
-.next-event .expo p {
-        text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
-        padding: 2rem;
-    }
-
-.event p {
-        font-family: var(--text-font-family);
-        color: var(--text-color);
-        }
-=======
-    --text-hover:#fd9d5c;  
-    --title-font-family: 'Ultra', serif; 
-    --text-font-family:'Fredoka', sans-serif;
-}
-
-body {
-    margin: 0;
-    padding:0;
-    font-family:var(text-font-family);
-}
-
-/*NAV*/
-nav{
-    width:100%;
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color); 
-}
-
-.logo{
-    width:150px;
-}
-
-/*Menu*/
-nav ul {
-    list-style: none;
-    font-size: 1.25rem;
-    margin-right: 2rem;
-
-}
-
-nav ul li {
-    display: inline-block;
-    margin:1rem;
-    cursor: pointer;
-}
-
-nav ul li a {
-    padding: .25rem;
-    text-decoration: none;
-    color:var(--text-color);
+.contact p {
     font-family: var(--text-font-family);
+    color: var(--text-color);
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-nav a:hover {
-    background-color:var(--text-hover);
-    color:var(--primary-color);
-    font-weight:700;
-  }
-
-/*Media queries*/
-  @media screen and (min-width: 375px) and (max-width= 800px){
-    nav{
-        flex-direction:column;
-    }  
+.contactform{
+    padding: 75px 50px;
+    background: var(--secondary-color);
+    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    max-width: 50vw;
 }
 
+.contactform .inputboite{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform h2{
+    margin-top: -7vh;
+    font-family: var(--title-font-family);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contactform .inputboite textarea{
+    width: 100%;
+    height: 10vh;
+    border: 3px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputboite input {
+width: 100%;
+border: 3px solid #555;
+padding: 10px;
+color: #111;
+outline: none;
+font-size: 16px;
+font-weight: 300;
+resize: none;
+}
+
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #00000077;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .titre-text span{
+    color: #1dc52b;
+    font-size: 2em;
+}
 
 
 /*FOOTER*/
