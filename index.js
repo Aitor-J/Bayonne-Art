@@ -1,3 +1,8 @@
+
+
+  
+
+
 const boxes = document.querySelectorAll(".mosaique > div");
 console.log(boxes);
 box1.addEventListener("mouseover", function() {
@@ -15,3 +20,4 @@ for (let i = 0; i < boxes.length; i++) {
     boxes[i].querySelector("a h3").style.opacity = "0"
 });
 }
+
