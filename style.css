@@ -12,6 +12,13 @@
     --text-hover:#fd9d5c;
     --title-font-family: 'Ultra', serif; 
     --text-font-family:'Fredoka', sans-serif;
+    --text-font-size: 1.5rem;
+    --title-font-size: 2rem;
+    --contact-title-font-size: 1.5rem;
+    --contact-text-font-size: 1rem;
+
+    --media-text-font-size: 0.3rem;
+    --media-title-font-size: 0.5rem;
 }
 /* Variables CSS */
 
@@ -65,10 +72,122 @@ nav a:hover {
   }
 
 /*Media queries*/
-  @media screen and (min-width: 375px) and (max-width= 800px){
-    nav{
+@media screen and (min-width: 50px) and (max-width: 800px){
+nav{
         flex-direction:column;
-    }  
+ }  
+
+section.event {
+    margin-top: 6vh;
+}
+
+.presentation .mosaique div a h3 {
+    opacity: 1;
+}
+
+.mosaique div img {
+    filter: blur(0.2px) brightness(0.5);
+}
+
+.presentation .mosaique .box1{
+    width: 100%;
+    height: auto;
+}
+
+.presentation .mosaique .box1 img{
+    width: 100%;
+    height: auto;
+}
+
+.presentation .mosaique .box2{
+    width: 100%;
+    height: auto;
+}
+
+.presentation .mosaique .box2 img{
+    width: 100%;
+    height: auto;
+}
+
+.presentation .mosaique .box3 {
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box3 img{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box4{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box4 img{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+
+.presentation .mosaique .box5{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box5 img{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box6{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.presentation .mosaique .box6 img{
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.maps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+.event p {
+    margin-top: 5vh;
+    padding: 10vh;
+}
+
+
 }
 
 header.bg-home {
@@ -170,9 +289,9 @@ main {
 .presentation{
     position: relative;
     width: 80vw;
-    height: 160vh;
+    height: auto;
     margin-left: 10vw;
-    margin-top: 65vh;
+    margin-top: 5vh;
     }
 
 .mosaique .box1{
@@ -198,7 +317,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--text-color);
-    font-size: 2rem;
+    font-size: 3vw;
     font-family: var(--title-font-family);
     font-weight: lighter;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
@@ -220,13 +339,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.box2 img {
+.mosaique .box2 img {
     width: 20vw;
     height: 98vh;
     object-fit: cover;
 }
 
-.box3{
+.mosaique .box3{
     position: relative;
     width: 20vw;
     height: 120vh;
@@ -234,13 +353,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: -160vh;
 }
 
-.box3 img {
+.mosaique .box3 img {
     width: 20vw;
     height: 120vh;
     object-fit: cover;
 }
 
-.box4{
+.mosaique .box4{
     position: relative;
     width: 59vw;
     height: 38vh;
@@ -248,13 +367,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.box4 img {
+.mosaique .box4 img {
     width: 59vw;
     height: 38vh;
     object-fit: cover;
 }
 
-.box5{
+.mosaique .box5{
     position: relative;
     width: 38vw;
     height: 80vh;
@@ -262,13 +381,13 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: -160vh;
 }
 
-.box5 img {
+.mosaique .box5 img {
     width: 38vw;
     height: 80vh;
     object-fit: cover;
 }
 
-.box6{
+.mosaique .box6{
     position: relative;
     width: 38vw;
     height: 38vh;
@@ -276,7 +395,7 @@ filter: blur(0.2px) brightness(0.5);
     margin-top: 2vh;
 }
 
-.box6 img {
+.mosaique .box6 img {
     width: 38vw;
     height: 38vh;
     object-fit: cover;
@@ -284,7 +403,7 @@ filter: blur(0.2px) brightness(0.5);
 
 /* EVENT */
 .event {
-    margin-top: 40px;
+    margin-top: 40vh;
     padding-top: 40px;
     font-weight: lighter;
 }
@@ -305,7 +424,7 @@ background-size: cover;
     color: var(--text-color);
     text-align: center;
     padding-top: 5%;
-    font-size: 2rem;
+    font-size: 3vw;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
     z-index: 1;
     }
@@ -313,10 +432,9 @@ background-size: cover;
 .event p {
     font-family: var(--text-font-family);
     color: var(--text-color);
-    text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 1.5rem;
+    font-size: 2vw;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
 }
 
@@ -381,7 +499,9 @@ width: 50vw;
     font-family: var(--title-font-family);
     color: var(--text-color);
     text-align: center;
-    }
+    font-size: 3vw;
+    margin-bottom: 4vh;
+}
 
 .contact p {
     font-family: var(--text-font-family);
@@ -389,6 +509,7 @@ width: 50vw;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    font-size: 2vw;
 }
 
 .contactform{
@@ -411,9 +532,11 @@ width: 50vw;
 
 .contactform h2{
     margin-top: -7vh;
+    margin-bottom: 4vh;
     font-family: var(--title-font-family);
     color: var(--text-color);
     text-align: center;
+    font-size: 2vw;
 }
 
 .contactform .inputboite textarea{
@@ -423,9 +546,10 @@ width: 50vw;
     padding: 10px;
     color: #111;
     outline: none;
-    font-size: 16px;
+    font-size: 1.5vw;
     font-weight: 300;
     resize: none;
+    font-family: var(--text-font-family);
 }
 
 .contactform .inputboite input {
@@ -434,14 +558,15 @@ border: 3px solid #555;
 padding: 10px;
 color: #111;
 outline: none;
-font-size: 16px;
+font-size: 1.5vw;
 font-weight: 300;
 resize: none;
+font-family: var(--text-font-family);
 }
 
 
 .contactform .inputboite input[type="submit"]{
-    font-size: 1em;
+    font-size: 1.5vw;
     font-weight: 700;
     color: #ffff;
     background: #00000077;
@@ -456,12 +581,6 @@ resize: none;
     align-items: center;
     justify-content: center;
 }
-
-.contact .titre-text span{
-    color: #1dc52b;
-    font-size: 2em;
-}
-
 
 /*FOOTER*/
 .foot-container{
