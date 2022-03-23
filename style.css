@@ -7,6 +7,7 @@
 :root {
     --primary-color:#78708D;
     --secondary-color:#55457c;
+    --section-bg:#09263F;
     --text-color: #FFF2C3;
 
     --text-hover:#fd9d5c;
@@ -19,7 +20,7 @@ body {
     margin: 0;
     padding:0;
     font-family:var(text-font-family);
-    background-color: #09263F;
+    background-color: var( --section-bg);
     color: var(--text-color);
 }
 
@@ -29,7 +30,7 @@ nav{
     height: 56px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--primary-color); 
 }
 
@@ -61,8 +62,33 @@ nav ul li a {
 nav a:hover {
     background-color:var(--text-hover);
     color:var(--primary-color);
+    transition:0.5s;
     font-weight:700;
   }
+/*Menu: pages "Artistes" */
+ul li ul{
+      display:none;
+      height:auto;
+      margin:0;
+      padding:0;
+  }
+
+ul li:hover ul{
+    display:block;
+    background-color: var(--text-hover);
+    padding: 0.2rem;
+    transition:0.5s;
+}
+
+.sub-menu-item{
+    display:block;
+    padding-left: 0.4rem 0.2rem 0.4rem 0.2rem;
+}
+
+
+ 
+  
+
 
 /*Media queries*/
   @media screen and (min-width: 375px) and (max-width= 800px){
