@@ -1,10 +1,4 @@
-
-
-  
-
-
 const boxes = document.querySelectorAll(".mosaique > div");
-console.log(boxes);
 
 box1.addEventListener("mouseover", function() {
 document.getElementById("title").style.opacity = "1"; 
