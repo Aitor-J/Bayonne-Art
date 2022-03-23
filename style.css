@@ -131,10 +131,6 @@ header.bg-home {
 }
 }
 
-body.body-home{
-    background-color:#78708d  ;
-}
-
 .main h2 {
     font-size: 3rem;
     color: #fff2c3;
@@ -168,6 +164,7 @@ main {
 .vincent {         
     float:right;            
 }
+
 
 /* MOSAIQUE */
 .presentation{
@@ -310,6 +307,7 @@ background-size: cover;
     padding-top: 5%;
     font-size: 2rem;
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
+    z-index: 1;
     }
 
 .event p {
