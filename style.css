@@ -14,7 +14,7 @@
     --title-font-family: 'Ultra', serif; 
     --text-font-family:'Fredoka', sans-serif;
 }
-/* Variables CSS */
+
 
 body {
     margin: 0;
@@ -31,11 +31,26 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
+    font-family: var(--text-font-family); 
 }
 
 .logo{
     width:150px;
+    margin-bottom: 20%;
+    margin-top: -20px;
+}
+
+.burger{
+   height: 38px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: none;
+  }
+
+/*Menu burger*/
+nav.burger{
+    display:none;
 }
 
 /*Menu*/
@@ -43,37 +58,39 @@ nav ul {
     list-style: none;
     font-size: 1.25rem;
     margin-right: 2rem;
-
 }
 
 nav ul li {
     display: inline-block;
     margin:1rem;
     cursor: pointer;
+    position: relative;
 }
 
 nav ul li a {
     padding: .25rem;
     text-decoration: none;
     color:var(--text-color);
-    font-family: var(--text-font-family);
 }
 
-nav a:hover {
+nav a:hover, nav p:hover{
     background-color:var(--text-hover);
     color:var(--primary-color);
     transition:0.5s;
     font-weight:700;
   }
-/*Menu: pages "Artistes" */
-ul li ul{
-      display:none;
-      height:auto;
-      margin:0;
-      padding:0;
-  }
 
-ul li:hover ul{
+/* Menu: pages "Artistes" */
+.sub_menu_list{
+    position: absolute;
+    width:200px;
+    display:none;
+    height:auto;
+    padding-top: 8px;
+    margin:0;
+}
+
+.menu-item:hover ul{
     display:block;
     background-color: var(--text-hover);
     padding: 0.2rem;
@@ -82,452 +99,39 @@ ul li:hover ul{
 
 .sub-menu-item{
     display:block;
-    padding-left: 0.4rem 0.2rem 0.4rem 0.2rem;
+    padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+    margin:0;
 }
 
-
- 
-  
-
+.menu-item p{
+    padding-bottom: 14px;
+    padding: .25rem;
+}
 
 /*Media queries*/
-  @media screen and (min-width: 375px) and (max-width= 800px){
+
+@media screen and (min-width: 375px) and (max-width: 800px){
     nav{
-        flex-direction:column;
-    }  
-}
-
-header.bg-home {
-    background-image: url("https://s1.1zoom.me/big3/832/France_Houses_Rivers_490728.jpg");
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-}
-
-/*HOMEPAGE*/
-.home {
-    position: relative;
-    text-align : center;
-        
-        
-}
-
-.home h1 {
-    font-size: 4rem;
-    color: black;
-}
-
-.logoMain {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-}
-
-.home h1 {
-    animation: fade 5s infinite; 
-    opacity: 0;
-    margin-top: 20vh;
-}
-
-@keyframes fade {
-    from {
-     opacity: 0;
-}
-    to {
-    opacity: 1;
-}
-}
-
-.logoMain {
-    animation: write 5s infinite; 
-}
-
-@keyframes write {
-    from {
-    margin-left: -20%;
-                      
-    }
-                  
-    to {
-    margin-left: 18%;
-}
-}
-
-body.body-home{
-    background-color:#78708d  ;
-}
-
-.main h2 {
-    font-size: 3rem;
-    color: #fff2c3;
-    text-align: center;
-    margin-top: 70vh;
-    font-weight: bold;
-}
-                    
-                
-            
-.main p {
-                     
-    font-size: 1rem;
-    color: #fff2c3;
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    margin-top: 7vh;             
-}
-
-.artiste2 img {
-    /* border-radius: 50%; */
-    clip-path:ellipse(40% 50%);
-    border : 20px solid #000000;               
-}
-
-main {
-    background-color:#78708d ;
-}
-
-.vincent {         
-    float:right;            
-}
-
-/* MOSAIQUE */
-.presentation{
-    position: relative;
-    width: 80vw;
-    height: 160vh;
-    margin-left: 10vw;
-    margin-top: 65vh;
+        justify-content: space-between;
+        z-index: 2; 
+        font-size: 1rem;
     }
 
-.mosaique .box1{
-    position: relative;
-    width: 20vw;
-    height: 60vh;
-    margin-left: 0vw;
-    transition: 0.5s;
-}
-/* contain mosaique box1 */
+    .burger{
+        height: 38px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 15px;
+        display: block;
 
-.mosaique .box1 img {
-    height: 60vh;
-    width: 20vw;
-    object-fit: cover;
-}
-/* contain mosaique img */
+       }
 
-.mosaique div a h3 {
-    opacity:0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--text-color);
-    font-size: 2rem;
-    font-family: var(--title-font-family);
-    font-weight: lighter;
-    text-shadow: 2px 2px 1px rgb(0, 0, 0);
-    transition: 0.5s ease-in-out;
-}
-/* title mosaique */
-
-.mosaique div img:hover {
-transition: ease-out;
-transition: 0.5s;
-filter: blur(0.2px) brightness(0.5);
-}
-/* hover sur la mosaique  */
-
-.mosaique .box2{
-    position: relative;
-    width: 20vw;
-    height: 98vh;
-    margin-top: 2vh;
-}
-
-.box2 img {
-    width: 20vw;
-    height: 98vh;
-    object-fit: cover;
-}
-
-.box3{
-    position: relative;
-    width: 20vw;
-    height: 120vh;
-    margin-left: 21vw;
-    margin-top: -160vh;
-}
-
-.box3 img {
-    width: 20vw;
-    height: 120vh;
-    object-fit: cover;
-}
-
-.box4{
-    position: relative;
-    width: 59vw;
-    height: 38vh;
-    margin-left: 21vw;
-    margin-top: 2vh;
-}
-
-.box4 img {
-    width: 59vw;
-    height: 38vh;
-    object-fit: cover;
-}
-
-.box5{
-    position: relative;
-    width: 38vw;
-    height: 80vh;
-    margin-left: 42vw;
-    margin-top: -160vh;
-}
-
-.box5 img {
-    width: 38vw;
-    height: 80vh;
-    object-fit: cover;
-}
-
-.box6{
-    position: relative;
-    width: 38vw;
-    height: 38vh;
-    margin-left: 42vw;
-    margin-top: 2vh;
-}
-
-.box6 img {
-    width: 38vw;
-    height: 38vh;
-    object-fit: cover;
-}
-
-/* EVENT */
-.event {
-    margin-top: 40px;
-    padding-top: 40px;
-    font-weight: lighter;
-}
-
-
-.image_responsive { 
-background-image: url(./visitors-1649815.jpg);
-width: auto;
-height:100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-
-.event h2 {
-    font-family: var(--title-font-family);
-    color: var(--text-color);
-    text-align: center;
-    padding-top: 5%;
-    font-size: 2rem;
-    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+    .burger:hover{
+        display:block;
     }
 
-.event p {
-    font-family: var(--text-font-family);
-    color: var(--text-color);
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 1px rgb(0, 0, 0);
-}
-
-.maps {
-    margin-top: 15vh;
-    margin-left: 10vw;
-    display: flex;
-    justify-content: space-around;
-} 
-
-.link_map {
-height: 40vh;
-width: 50vw;
-}
-
-.next-event {
-        margin-top: 40px;
-        padding-top: 40px;
-        font-weight: lighter;
-    }
-    
-.next-event p {
-        text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
-}
-    
-.where {
-        margin-top: 15vh;
-        margin-left: 10vw;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-} 
-    
-.next-event img {
-    height: 40vh;
-    width: 40vw;
-    object-fit: cover;
+    nav ul{
+        display:none;
     }
 
-.next-event {
-    margin-top: 15vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-} 
-
-/*CONTACT*/
-
-.contact{
-    margin-top: 40px;
-    width: 100%;
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 10vh;
 }
-
-.contact h2 {
-    font-family: var(--title-font-family);
-    color: var(--text-color);
-    text-align: center;
-    }
-
-.contact p {
-    font-family: var(--text-font-family);
-    color: var(--text-color);
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.contactform{
-    padding: 75px 50px;
-    background: var(--secondary-color);
-    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    max-width: 50vw;
-}
-
-.contactform .inputboite{
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contactform h2{
-    margin-top: -7vh;
-    font-family: var(--title-font-family);
-    color: var(--text-color);
-    text-align: center;
-}
-
-.contactform .inputboite textarea{
-    width: 100%;
-    height: 10vh;
-    border: 3px solid #555;
-    padding: 10px;
-    color: #111;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    resize: none;
-}
-
-.contactform .inputboite input {
-width: 100%;
-border: 3px solid #555;
-padding: 10px;
-color: #111;
-outline: none;
-font-size: 16px;
-font-weight: 300;
-resize: none;
-}
-
-
-.contactform .inputboite input[type="submit"]{
-    font-size: 1em;
-    font-weight: 700;
-    color: #ffff;
-    background: #00000077;
-    display: inline-block;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    outline: none;
-    border: none;
-    max-width: 120px;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact .titre-text span{
-    color: #1dc52b;
-    font-size: 2em;
-}
-
-
-/*FOOTER*/
-.foot-container{
-    width:100%;
-    height: 115px;
-    background-color: var(--secondary-color);
-    color:var(--text-color);
-    font-family: var(--text-font-family);
-    font-weight: 400;
-}
-
-p.centered-text{
-    text-align:center;
-}
-
-p.centered-text a:hover{
-    color:var(--text-hover);
-    cursor:pointer;
-}
-
-.flex-footer-container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-p.border{
-    padding: 0.5rem 7rem 0.5rem 7rem;
-    font-size: 1.2rem;
-}
-
-.copyrigth{
-    border-top:1px solid var(--text-color);
-    margin: 0.3rem 0rem 0.3rem 0rem;
-    padding: 0.5rem;
-}
- 
-
-
-
-
