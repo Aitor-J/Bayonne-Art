@@ -93,14 +93,20 @@ nav a:hover, nav p:hover{
     height:auto;
     padding-top: 8px;
     margin:0;
+    z-index: 5;
+    background-color: var(--text-hover);
 }
 
-.menu-item:hover ul{
+.fleche {
+    display: none;
+}
+
+/* .menu-item:hover ul{
     display:block;
     background-color: var(--text-hover);
     padding: 0.2rem;
     transition:0.5s;
-}
+} */
 
 .sub-menu-item{
     display:block;
@@ -134,9 +140,31 @@ nav{
         display:block;
     }
 
-nav ul{
-        display:none;
-    }
+nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        transform: translateX(-100vw);
+      }
+
+.fleche {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+}
+
 
 section.event {
     margin-top: 6vh;
@@ -254,7 +282,7 @@ section.event {
 header.bg-home {
     background-image: url("https://s1.1zoom.me/big3/832/France_Houses_Rivers_490728.jpg");
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -717,6 +745,7 @@ main {
     height: 100%;
     transform-style: preserve-3d; 
     animation: rotate360 60s infinite forwards linear;
+    bottom: 11vh;
   }
   .carousel__face { 
     position: absolute;
