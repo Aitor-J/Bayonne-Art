@@ -19,31 +19,32 @@ if (window.innerWidth > 800) {
   showMenu("mouseout", "none");
 } else {
   selectMenu.style.display = "none";
-}
-
-// creation du burger en click il vient dans lecran 
+    // creation du burger en click il vient dans lecran 
 document.querySelector(".burger").addEventListener("click", () => {
-  document.getElementById("menu").style.transform = "translateX(0)";
-});
-
-// permet d'enlever le menu burger au click sur fleche
-document.querySelector(".arrow").addEventListener("click", () => {
-  document.getElementById("menu").style.transform = "translateX(-150vw)";
-});
-
-//permet d'avoir la liste d'artiste en mode burger
-document.getElementById("artiste").addEventListener("click", () => {
-  selectMenu.style.display = "block";
-});
-
-//permet de recuperer les liens de contact et events en faisant passer le burger menu a gauche again
-const itemsMenu = document.querySelectorAll(".menu > li");
-
-for (let j=2; j < itemsMenu.length; j++) {
-    itemsMenu[j].addEventListener("click", () => {
-        document.getElementById("menu").style.transform = "translateX(-150vw)";
-    });
+    document.getElementById("menu").style.transform = "translateX(0)";
+  });
+  
+  // permet d'enlever le menu burger au click sur fleche
+  document.querySelector(".arrow").addEventListener("click", () => {
+    document.getElementById("menu").style.transform = "translateX(-150vw)";
+  });
+  
+  //permet d'avoir la liste d'artiste en mode burger
+  document.getElementById("artiste").addEventListener("click", () => {
+    selectMenu.style.display = "block";
+  });
+  
+  //permet de recuperer les liens de contact et events en faisant passer le burger menu a gauche again
+  const itemsMenu = document.querySelectorAll(".menu > li");
+  
+  for (let j=2; j < itemsMenu.length; j++) {
+      itemsMenu[j].addEventListener("click", () => {
+          document.getElementById("menu").style.transform = "translateX(-150vw)";
+      });
+  }
 }
+
+
 
 //image
 const createImg = (nameArtist, format) => {
